@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/validateAPIStatusCode[1.1:38]","start":1744183449448,"end":1744183450976,"title":"features\/validateAPIStatusCode[1.1:38] 12:54:09.448-12:54:10.976 Validate API \/api\/user\/community.web.details Response"},{"id":2,"group":1,"content":"features\/validateAPIStatusCode[1.2:39]","start":1744183451002,"end":1744183452024,"title":"features\/validateAPIStatusCode[1.2:39] 12:54:11.002-12:54:12.024 Validate API \/timeline-api\/timeline\/get-timeline Response"},{"id":3,"group":1,"content":"features\/validateAPIStatusCode[1.3:40]","start":1744183452033,"end":1744183452285,"title":"features\/validateAPIStatusCode[1.3:40] 12:54:12.033-12:54:12.285 Validate API \/api\/profile\/detail Response"},{"id":4,"group":1,"content":"features\/validateAPIStatusCode[1.4:41]","start":1744183452294,"end":1744183452436,"title":"features\/validateAPIStatusCode[1.4:41] 12:54:12.294-12:54:12.436 Validate API \/api\/user\/get-left-menu Response"},{"id":5,"group":1,"content":"features\/validateAPIStatusCode[1.5:42]","start":1744183452445,"end":1744183452847,"title":"features\/validateAPIStatusCode[1.5:42] 12:54:12.445-12:54:12.847 Validate API \/chat-api\/room Response"},{"id":6,"group":1,"content":"features\/validateAPIStatusCode[1.6:43]","start":1744183452855,"end":1744183453393,"title":"features\/validateAPIStatusCode[1.6:43] 12:54:12.855-12:54:13.393 Validate API \/api\/helps Response"},{"id":7,"group":1,"content":"features\/validateAPIStatusCode[1.7:44]","start":1744183453402,"end":1744183453938,"title":"features\/validateAPIStatusCode[1.7:44] 12:54:13.402-12:54:13.938 Validate API \/api\/events Response"},{"id":8,"group":1,"content":"features\/validateAPIStatusCode[1.8:45]","start":1744183453944,"end":1744183454374,"title":"features\/validateAPIStatusCode[1.8:45] 12:54:13.944-12:54:14.374 Validate API \/api\/success-stories\/list Response"},{"id":9,"group":1,"content":"features\/validateAPIStatusCode[1.9:46]","start":1744183454384,"end":1744183454592,"title":"features\/validateAPIStatusCode[1.9:46] 12:54:14.384-12:54:14.592 Validate API \/api\/knowyourcommunity\/detail Response"},{"id":10,"group":1,"content":"features\/validateAPIStatusCode[1.10:47]","start":1744183454601,"end":1744183454823,"title":"features\/validateAPIStatusCode[1.10:47] 12:54:14.601-12:54:14.823 Validate API \/api\/gallery Response"},{"id":11,"group":1,"content":"features\/validateAPIStatusCode[1.11:48]","start":1744183454830,"end":1744183455232,"title":"features\/validateAPIStatusCode[1.11:48] 12:54:14.830-12:54:15.232 Validate API \/associate-partner-api\/business-category\/list Response"},{"id":12,"group":1,"content":"features\/validateAPIStatusCode[1.12:49]","start":1744183455236,"end":1744183455486,"title":"features\/validateAPIStatusCode[1.12:49] 12:54:15.236-12:54:15.486 Validate API \/api\/friends\/all-friends Response"},{"id":13,"group":1,"content":"features\/validateAPIStatusCode[1.13:50]","start":1744183455493,"end":1744183455707,"title":"features\/validateAPIStatusCode[1.13:50] 12:54:15.493-12:54:15.707 Validate API \/user-api\/v1\/communty-dazzling-star Response"},{"id":14,"group":1,"content":"features\/validateAPIStatusCode[1.14:51]","start":1744183455714,"end":1744183456065,"title":"features\/validateAPIStatusCode[1.14:51] 12:54:15.714-12:54:16.065 Validate API \/timeline-api\/saved-post\/list Response"},{"id":15,"group":1,"content":"features\/validateAPIStatusCode[1.15:52]","start":1744183456072,"end":1744183456228,"title":"features\/validateAPIStatusCode[1.15:52] 12:54:16.072-12:54:16.228 Validate API \/user-api\/v1\/user-notification-settings Response"},{"id":16,"group":1,"content":"features\/validateAPIStatusCode[1.16:53]","start":1744183456235,"end":1744183456479,"title":"features\/validateAPIStatusCode[1.16:53] 12:54:16.235-12:54:16.479 Validate API \/api\/friends\/blocked Response"},{"id":17,"group":1,"content":"features\/validateAPIStatusCode[1.17:54]","start":1744183456484,"end":1744183456643,"title":"features\/validateAPIStatusCode[1.17:54] 12:54:16.484-12:54:16.643 Validate API \/api\/v2\/likes\/getLikes Response"},{"id":18,"group":1,"content":"features\/validateAPIStatusCode[1.18:55]","start":1744183456650,"end":1744183456834,"title":"features\/validateAPIStatusCode[1.18:55] 12:54:16.650-12:54:16.834 Validate API api\/likes\/reaction-count Response"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
